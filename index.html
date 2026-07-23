@@ -6,29 +6,50 @@
         <meta name="description" content="Thomas Augusto Amorim de Araujo - Software Engineering student at University of Brasilia. Ambitious about cloud, product-driven systems, and big tech readiness." />
         <meta name="author" content="Thomas Augusto Amorim de Araujo" />
         <title>Thomas A. Araujo | Portfolio</title>
-        <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Sci‑fi headline font: Orbitron -->
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
-        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="styles.css" rel="stylesheet" />
         <style>
             header.masthead {
-                min-height: 100vh;
-                padding-top: 12rem;
-                padding-bottom: 10rem;
-                background: linear-gradient(180deg, rgba(10, 20, 32, 0.88), rgba(10, 20, 32, 0.72)), url('assets/img/header-bg.jpg?v=2') no-repeat center center;
-                background-size: cover;
-                color: #fff;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            padding-top: 12rem;
+            padding-bottom: 10rem;
+            color: #fff;
+            }
+
+            header.masthead .video-fundo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            }
+
+            header.masthead::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(10, 20, 32, 0.88), rgba(10, 20, 32, 0.72));
+            z-index: -1;
+            }
+
+            header.masthead .conteudo-header {
+            position: relative;
+            z-index: 1;
             }
             header.masthead .masthead-subheading,
-            header.masthead .masthead-heading {
-                color: #fff;
+            header.masthead .masthead-heading{
+                color: #a6a6a7;
                 text-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
             }
             header.masthead .masthead-subheading {
@@ -45,16 +66,20 @@
                 letter-spacing: 0.08em;
             }
             header.masthead .btn-primary {
-                background-color: #2d353e;
+                background-color: #2d353e58;
                 border-color: #2c343e;
-                box-shadow: 0 0 30px rgba(209, 209, 209, 0.284);
+                box-shadow: 0 0 500px rgba(209, 209, 209, 0.284);
             }
             header.masthead .btn-primary:hover {
-                background-color: #2d353e;
+                background-color: #3339416b;
                 border-color: #2d353e;
             }
             .page-section#skills .fa-stack .fa-circle.text-primary {
                 color: #6779ff !important;
+            }
+            .navbar-brand img {
+            filter: brightness(0) invert(1);
+            filter: drop-shadow(0 0 0 #757b82);
             }
         </style>
     </head>
@@ -81,13 +106,16 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
+                <video autoplay loop muted playsinline class="video-fundo">
+                    <source src="assets/vid/binary.mp4" type="video/mp4">
+                </video>
                 <div class="masthead-subheading">Hello, I’m Thomas Augusto Amorim de Araujo, and welcome to my portfolio!</div>
                 <div class="masthead-heading text-uppercase">Software Engineering student at University of Brasilia</div>
                 <a class="btn btn-primary btn-xl text-uppercase" href="#skills">Discover more</a>
             </div>
         </header>
         <!-- Strengths-->
-        <section class="page-section" id="skills">
+        <section class="page-section" id="skills" style="background-color: #0a131d;">
             <div class="container">
                 <div class="text-center">
                     <h2 style="color:#6779ff;" class="section-heading text-uppercase">Core Strengths</h2>
@@ -95,43 +123,43 @@
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
+                        <span class="fa-stack fa-4x autorot">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-brain fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Problem Solving</h4>
+                        <h4 class="my-3" style = "color: #6779ff;">Problem Solving</h4>
                         <p class="text-muted">Deepening algorithmic thinking, system design, and data-driven decisions to build resilient software.</p>
                     </div>
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
+                        <span class="fa-stack fa-4x autorot">''
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-users fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Collaboration</h4>
+                        <h4 class="my-3" style = "color: #6779ff;">Collaboration</h4>
                         <p class="text-muted">Working effectively with peers, mentors, and stakeholders to turn ideas into scalable solutions.</p>
                     </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
+                    <div class="col-md-4" >
+                        <span class="fa-stack fa-4x autorot">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-rocket fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Ownership</h4>
+                        <h4 class="my-3" style = "color: #6779ff;">Ownership</h4>
                         <p class="text-muted">Taking initiative, shipping quality work, and continuously improving through feedback and learning.</p>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Focus Areas-->
-        <section class="page-section bg-light" id="portfolio">
+        <section class="page-section bg-light" id="portfolio" style ="background-color: #272f39 !important;">
             <div class="container">
                 <div class="text-center">
                     <h2 style="color:#72e6e0" class="section-heading text-uppercase">Focus Areas</h2>
                     <h3 class="section-subheading text-muted">Areas I am building to perform at big tech standards.</h3>
                 </div>
-                <div class="row">
+                <div class="row" style = "color: #6fdecf">
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- Portfolio item 1-->
-                        <div class="portfolio-item">
+                        <div class="portfolio-item autoshow">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -146,7 +174,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- Portfolio item 2-->
-                        <div class="portfolio-item">
+                        <div class="portfolio-item autoshow">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -161,7 +189,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- Portfolio item 3-->
-                        <div class="portfolio-item">
+                        <div class="portfolio-item autoshow">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -176,7 +204,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
                         <!-- Portfolio item 4-->
-                        <div class="portfolio-item">
+                        <div class="portfolio-item autoshow">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -191,7 +219,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
                         <!-- Portfolio item 5-->
-                        <div class="portfolio-item">
+                        <div class="portfolio-item autoshow">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -206,7 +234,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <!-- Portfolio item 6-->
-                        <div class="portfolio-item">
+                        <div class="portfolio-item autoshow">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -223,44 +251,44 @@
             </div>
         </section>
         <!-- About-->
-        <section class="page-section" id="about">
+        <section class="page-section" id="about" style ="background-color:#3d444d !important;">
             <div class="container">
                 <div class="text-center">
                     <h2 style="color: #56ff00;" class="section-heading text-uppercase">Academic Journey</h2>
                     <h3 class="section-subheading text-muted">Growing toward a software engineering career that aligns with big tech excellence.</h3>
                 </div>
                 <ul class="timeline">
-                    <li>
+                    <li class="autoshow">
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.png" alt="University of Brasilia" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>2025</h4>
+                                <h4 style = "color: #56ff00;">2025</h4>
                                 <h4 class="subheading">Started at University of Brasilia</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Began a rigorous Software Engineering program, building a strong foundation in programming, algorithms, and system design.</p></div>
+                            <div class="timeline-body"><p class="text-muted">Began a Software Engineering degree at UnB, building a strong foundation in programming, algorithms, and system design, enhancing my skills and knowledge in areas such as AI, structured programming (C, Python and JavaScript), and subjects like linear algebra and calculus.</p></div>
                         </div>
                     </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="Collaborative projects" /></div>
+                    <li class="timeline-inverted autoshow">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" style ="filter: brightness(0) invert(1);"src="assets/img/about/2.png" alt="Collaborative projects" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>2026</h4>
+                                <h4 style = "color: #56ff00;">2026</h4>
                                 <h4 class="subheading">Project-driven growth</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Focused on collaborative software projects, practical engineering workflows, and preparing for real internship experiences.</p></div>
+                            <div class="timeline-body"><p class="text-muted">Focused on collaborative software projects, practical engineering workflows, and real-world problem-solving. Expanded my technical stack to include Git, Docker, HTML, and CSS for web and object-oriented development, while exploring AI automation with n8n, Cohere, and Railway to deploy my first AI agent.</p></div>
                         </div>
                     </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="Big tech readiness" /></div>
+                    <li class="autoshow">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" style ="filter: brightness(0) invert(1);" src="assets/img/about/3.png" alt="Big tech readiness" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>2027</h4>
+                                <h4 style = "color: #56ff00;">2027</h4>
                                 <h4 class="subheading">Big tech readiness</h4>
                             </div>
                             <div class="timeline-body"><p class="text-muted">Sharpening my skills in cloud engineering, scalable architecture, clean code, and product-minded development.</p></div>
                         </div>
                     </li>
-                    <li class="timeline-inverted">
+                    <li class="timeline-inverted autoshow">
                         <div class="timeline-image">
                             <h4>
                                 And more
@@ -275,42 +303,15 @@
             </div>
         </section>
         <!-- Growth-->        
-        <section class="page-section bg-light" id="growth">
+        <section class="page-section bg-light" id="growth" style ="background-color:#272f39 !important;">
             <div class="container">
                 <div class="text-center">
                     <h2 style="color: #d0ff00;" class="section-heading text-uppercase">Growth Pillars</h2>
                     <h3 class="section-subheading text-muted">The personal and professional qualities I am sharpening to join leading technology teams.</h3>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="Technical excellence" />
-                            <h4>Technical excellence</h4>
-                            <p class="text-muted">Pursuing deep knowledge in software engineering fundamentals, cloud systems, and clean architecture.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="Collaborative mindset" />
-                            <h4>Collaborative mindset</h4>
-                            <p class="text-muted">Growing teamwork, communication, and stakeholder empathy to deliver meaningful products.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="Product ownership" />
-                            <h4>Product ownership</h4>
-                            <p class="text-muted">Learning to write reliable code, take responsibility for outcomes, and continuously improve systems.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">During my graduation, I am focused on building a portfolio of real solutions, sharpening cloud-ready software skills, and becoming the type of engineer who adds value from day one.</p></div>
-                </div>
-            </div>
         </section>
         <!-- Ambitions-->
-        <div class="py-5" id="companies">
+        <section  style = "background-color: #0a131d !important;">
+        <div class="py-5" id="companies"></div>
             <div class="container">
                 <div class="text-center mb-4">
                     <h2 style="color: #dc3545;" class="section-heading text-uppercase">Target companies</h2>
@@ -350,6 +351,7 @@
                 </div>
             </div>
         </footer>
+        </section>
         <!-- Portfolio Modals-->
         <!-- Portfolio item 1 modal popup-->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
